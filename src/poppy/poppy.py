@@ -1,10 +1,10 @@
 import html
-from poppy import fetch_response
+from poppy import fetch_questions
 
 
 
 def main():
-    question_set = fetch_response.fetch_response()
+    question_set = fetch_questions.fetch_response()
     points = 0
 
     for index, each_question in enumerate(question_set):
@@ -20,16 +20,16 @@ def main():
         for answer in all_answers:
             print(f"=> {answer}")
     
-        stringo = input("Enter Answer or Option: ")
+        potential_answer = input("Enter Answer or Option: ")
 
-        if len(stringo.strip()) < 2:
-            if int(stringo) == all_answers.index(correct_answer) + 1:
+        if len(potential_answer.strip()) < 2:
+            if int(potential_answer) == all_answers.index(correct_answer) + 1:
                 print("You got it right!")
                 points += 3
             else:
                 print("That is not right!")
         else:
-            if stringo == correct_answer:
+            if potential_answer == correct_answer:
                 print("You got it right!")
                 points += 3
             else:

@@ -5,7 +5,15 @@ TRIVIA_URL = "https://opentdb.com/api.php?amount=10&type=multiple"
 
 
 def fetch_response():
-    response = requests.get(TRIVIA_URL)
+    question_category = input("Enter question category (eg. random, animals): ")
+    
+    response = ""
+    
+    if question_category.lower() == "animals": 
+        response = requests.get(TRIVIA_URL+"&category=27") 
+    else:
+        response = requests.get(TRIVIA_URL)
+        
     data = response.json()
 
     if data['response_code'] == 0:
