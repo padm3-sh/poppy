@@ -1,3 +1,7 @@
+# Version 0.4.0
+
+- Added two categories: 'vehicles' and 'mythology'
+
 # Version 0.3.0
 
 - Added one distinct category: 'animals'

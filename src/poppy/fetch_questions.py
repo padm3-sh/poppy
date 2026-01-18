@@ -10,7 +10,11 @@ def fetch_response():
     response = ""
     
     if question_category.lower() == "animals": 
-        response = requests.get(TRIVIA_URL+"&category=27") 
+        response = requests.get(TRIVIA_URL+"&category=27")
+    elif question_category.lower() == "mythology":
+        response = requests.get(TRIVIA_URL+"&category=20")
+    elif question_category.lower() == "vehicles":
+        response = requests.get(TRIVIA_URL+"&category=28")
     else:
         response = requests.get(TRIVIA_URL)
         

@@ -12,6 +12,13 @@
 
 ---
 
+## Available Categories (Only MCQ)
+
+* Animals
+* Mythology
+* Vehicles
+* Random
+
 ## License
 
 GNU GENERAL PUBLIC LICENSE
